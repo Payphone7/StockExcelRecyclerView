@@ -244,7 +244,6 @@ public class ExcelRecyclerView extends FrameLayout {
                 leftLayout = itemView.findViewById(R.id.leftLayout);
                 tipLayout = itemView.findViewById(R.id.tipLayout);
                 leftLayout.setLayoutParams(new LayoutParams(dip2px(itemView.getContext(),LeftWidth), ViewGroup.LayoutParams.WRAP_CONTENT));
-//                itemView.setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             }
         }
     }

@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
                 beanFG.isShowTip = true
                 beanFG.code = "163822"
             }else if (i % 4 == 1){
-                beanFG.name = "富国中证500指数增强(LOF)A"
+                beanFG.name = "富国中证500指数增强富国中证500指数增强(LOF)A"
                 beanFG.code = "161017"
 
             }else{
