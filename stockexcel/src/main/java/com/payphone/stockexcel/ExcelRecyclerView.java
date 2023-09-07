@@ -3,6 +3,7 @@ package com.payphone.stockexcel;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -11,6 +12,8 @@ import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.PagerSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
@@ -33,6 +36,13 @@ public class ExcelRecyclerView extends FrameLayout {
 
     private TopItemAdapter topItemAdapter;
     private ContentItemAdapter contentItemAdapter;
+
+    private int LeftWidth = 150;
+
+    public int dip2px(Context context, float dipValue) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dipValue * scale + 0.5f);
+    }
 
     public ExcelRecyclerView(@NonNull Context context) {
         this(context, null);
@@ -61,6 +71,9 @@ public class ExcelRecyclerView extends FrameLayout {
         LayoutInflater.from(context).inflate(R.layout.layout_excel_recyclerview, this,true);
         mContentRecyclerView = findViewById(R.id.contentRecyclerView);
         mTopRecyclerView = findViewById(R.id.topRecyclerView);
+        leftTopLayout = findViewById(R.id.leftTopLayout);
+
+        mContentRecyclerView.addItemDecoration(new DividerItemDecoration(context,DividerItemDecoration.VERTICAL));
 
         LinearLayoutManager topManager = new LinearLayoutManager(context);
         topManager.setOrientation(LinearLayoutManager.HORIZONTAL);
@@ -75,9 +88,7 @@ public class ExcelRecyclerView extends FrameLayout {
         mContentRecyclerView.setLayoutManager(columnManager);
         contentItemAdapter = new ContentItemAdapter(mTopRecyclerView);
         mContentRecyclerView.setAdapter(contentItemAdapter);
-
-
-
+        leftTopLayout.setLayoutParams(new LayoutParams(dip2px(context, LeftWidth), dip2px(context,50)));
     }
 
 
@@ -226,11 +237,14 @@ public class ExcelRecyclerView extends FrameLayout {
 
             FrameLayout tipLayout;
 
+
             public ViewHolder(@NonNull View itemView) {
                 super(itemView);
                 itemRecyclerView = itemView.findViewById(R.id.itemRecyclerView);
                 leftLayout = itemView.findViewById(R.id.leftLayout);
                 tipLayout = itemView.findViewById(R.id.tipLayout);
+                leftLayout.setLayoutParams(new LayoutParams(dip2px(itemView.getContext(),LeftWidth), ViewGroup.LayoutParams.WRAP_CONTENT));
+//                itemView.setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             }
         }
     }

@@ -1,1 +1,5 @@
 /build
+/.idea
+/.gradle
+.gradle
+/.gradle/7.5/fileHashes/fileHashes.lock

@@ -23,25 +23,38 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setList() {
-        for (i in 0..200) {
-            val bean = StockBean()
-            bean.current = "4000"
-            bean.prisePercent = "5%"
-            bean.speed = "0.5%"
-            bean.total = "100000万亿"
-            bean.time = "2020-10-10"
-            if (i % 11 == 0) {
-                bean.name =
-                    "上证指数上证指数上证指数上证指数上证指数上证指数上证指数上证指数上证指数上证指数"
-                bean.isShowTip = true
-            } else {
-                bean.name = "上证指数"
-            }
-            if (i % 19 == 0) {
-                bean.isShowTip = true
-            }
-            list.add(bean)
-        }
+        for (i in 0..100) {
+            val beanFG = StockBean()
 
+            if(i % 4 == 0){
+                beanFG.name = "中银主题策略混合A"
+                beanFG.isShowTip = true
+                beanFG.code = "163822"
+            }else if (i % 4 == 1){
+                beanFG.name = "富国中证500指数增强(LOF)A"
+                beanFG.code = "161017"
+
+            }else{
+                beanFG.name = "招商中证白酒指数(LOF)A"
+                beanFG.code = "161725"
+            }
+            beanFG.jingzhi = "2.2130"
+            beanFG.guzhi = "2.1898"
+            beanFG.tianjaihoushouyi = 0.14
+            beanFG.jinyizhou = 0.41
+            beanFG.jinyiyue = -4.69
+            beanFG.jinsanyue = -1.12
+            beanFG.jinliuyue = -5.47
+            beanFG.tianjaihoushouyi = 2.26
+            beanFG.jinnianlai = -5.18
+            beanFG.jinyinian = -16.84
+            beanFG.jinliangnian = -0.36
+            beanFG.jinsannian = -0.36
+            beanFG.jinwunian = 49.41
+            beanFG.chenglilai
+            list.add(beanFG)
+        }
     }
+
+
 }

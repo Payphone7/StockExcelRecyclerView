@@ -8,15 +8,33 @@ public class StockBean {
 
     private String name;
 
-    private String prisePercent;
+    private String code;
 
-    private String speed;
+    private String jingzhi;
 
-    private String current;
+    private String guzhi;
 
-    private String total;
+    private double tianjaihoushouyi;
 
-    private String time;
+    private double jinyizhou;
+
+    private double jinyiyue;
+    private double jinsanyue;
+    private double jinliuyue;
+
+    private double jinnianlai;
+    private double jinyinian;
+    private double jinliangnian;
+    private double jinsannian;
+    private double jinwunian;
+
+    private double chenglilai;
+
+    private String tip1;
+
+
+
+
 
     private boolean showTip;
 
@@ -28,44 +46,12 @@ public class StockBean {
         this.name = name;
     }
 
-    public String getPrisePercent() {
-        return prisePercent;
+    public void setCode(String code) {
+        this.code = code;
     }
 
-    public void setPrisePercent(String prisePercent) {
-        this.prisePercent = prisePercent;
-    }
-
-    public String getSpeed() {
-        return speed;
-    }
-
-    public void setSpeed(String speed) {
-        this.speed = speed;
-    }
-
-    public String getCurrent() {
-        return current;
-    }
-
-    public void setCurrent(String current) {
-        this.current = current;
-    }
-
-    public String getTotal() {
-        return total;
-    }
-
-    public void setTotal(String total) {
-        this.total = total;
-    }
-
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
+    public String getCode() {
+        return code;
     }
 
     public void setShowTip(boolean showTip) {
@@ -76,4 +62,115 @@ public class StockBean {
         return showTip;
     }
 
+    public String getJingzhi() {
+        return jingzhi;
+    }
+
+    public void setJingzhi(String jingzhi) {
+        this.jingzhi = jingzhi;
+    }
+
+    public String getGuzhi() {
+        return guzhi;
+    }
+
+    public void setGuzhi(String guzhi) {
+        this.guzhi = guzhi;
+    }
+
+    public double getTianjaihoushouyi() {
+        return tianjaihoushouyi;
+    }
+
+    public void setTianjaihoushouyi(double tianjaihoushouyi) {
+        this.tianjaihoushouyi = tianjaihoushouyi;
+    }
+
+    public double getJinyizhou() {
+        return jinyizhou;
+    }
+
+    public void setJinyizhou(double jinyizhou) {
+        this.jinyizhou = jinyizhou;
+    }
+
+    public double getJinyiyue() {
+        return jinyiyue;
+    }
+
+    public void setJinyiyue(double jinyiyue) {
+        this.jinyiyue = jinyiyue;
+    }
+
+    public double getJinsanyue() {
+        return jinsanyue;
+    }
+
+    public void setJinsanyue(double jinsanyue) {
+        this.jinsanyue = jinsanyue;
+    }
+
+    public double getJinliuyue() {
+        return jinliuyue;
+    }
+
+    public void setJinliuyue(double jinliuyue) {
+        this.jinliuyue = jinliuyue;
+    }
+
+    public double getJinnianlai() {
+        return jinnianlai;
+    }
+
+    public void setJinnianlai(double jinnianlai) {
+        this.jinnianlai = jinnianlai;
+    }
+
+    public double getJinyinian() {
+        return jinyinian;
+    }
+
+    public void setJinyinian(double jinyinian) {
+        this.jinyinian = jinyinian;
+    }
+
+    public double getJinliangnian() {
+        return jinliangnian;
+    }
+
+    public void setJinliangnian(double jinliangnian) {
+        this.jinliangnian = jinliangnian;
+    }
+
+    public double getJinsannian() {
+        return jinsannian;
+    }
+
+    public void setJinsannian(double jinsannian) {
+        this.jinsannian = jinsannian;
+    }
+
+    public String getTip1() {
+        return tip1;
+    }
+
+    public void setTip1(String tip1) {
+        this.tip1 = tip1;
+    }
+
+    public double getJinwunian() {
+        return jinwunian;
+    }
+
+    public void setJinwunian(double jinwunian) {
+        this.jinwunian = jinwunian;
+    }
+
+    public double getChenglilai() {
+        return chenglilai;
+    }
+
+    public void setChenglilai(double chenglilai) {
+        this.chenglilai = chenglilai;
+    }
 }
