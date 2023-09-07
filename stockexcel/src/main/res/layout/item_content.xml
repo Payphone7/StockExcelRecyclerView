@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tipLayout"
+        android:id="@+id/leftLayout"
+        app:layout_constraintEnd_toStartOf="@id/itemRecyclerView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="100dp"
+        android:minHeight="50dp"
+        android:maxHeight="80dp"
+        android:layout_height="wrap_content">
+
+
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintTop_toTopOf="@id/leftLayout"
+        app:layout_constraintBottom_toBottomOf="@id/leftLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/leftLayout"
+        android:id="@+id/itemRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <FrameLayout
+        android:visibility="visible"
+        android:id="@+id/tipLayout"
+        android:layout_width="match_parent"
+        android:minHeight="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toBottomOf="@id/leftLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content">
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
