@@ -28,10 +28,10 @@ class MainActivity : AppCompatActivity() {
 
             if(i % 4 == 0){
                 beanFG.name = "中银主题策略混合A"
-                beanFG.isShowTip = true
+                beanFG.isShowTip = false
                 beanFG.code = "163822"
             }else if (i % 4 == 1){
-                beanFG.name = "富国中证500指数增强富国中证500指数增强(LOF)A"
+                beanFG.name = "富国中证500指数增强(LOF)A"
                 beanFG.code = "161017"
 
             }else{
